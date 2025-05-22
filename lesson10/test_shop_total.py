@@ -5,7 +5,6 @@ from pages.cart_page import CartPage
 from pages.checkout_page import CheckoutPage
 
 
-
 @allure.title("Проверка итоговой суммы заказа")
 @allure.description("Добавление товаров в корзину, оформление заказа и проверка общей суммы.")
 @allure.feature("Интернет-магазин")
