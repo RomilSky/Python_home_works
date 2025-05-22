@@ -1,0 +1,19 @@
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
+
+
+class InventoryPage:
+    """Страница каталога товаров"""
+
+    def __init__(self, driver: WebDriver):
+        self.driver = driver
+
+    def add_items_to_cart(self) -> None:
+        """Добавить 3 товара в корзину"""
+        self.driver.find_element(By.ID, "add-to-cart-sauce-labs-backpack").click()
+        self.driver.find_element(By.ID, "add-to-cart-sauce-labs-bolt-t-shirt").click()
+        self.driver.find_element(By.ID, "add-to-cart-sauce-labs-onesie").click()
+
+    def go_to_cart(self) -> None:
+        """Перейти в корзину"""
+        self.driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
